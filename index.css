@@ -1,0 +1,828 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Condensed, sans-serif;
+}
+
+/* Navigation Bar Styles */
+.bar1 {
+    background-color: #006dae;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: 0.8rem;
+    cursor: pointer;
+}
+
+.left img {
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.mid {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-left: 14rem;
+    cursor: pointer;
+}
+
+.right {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.right li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 540;
+}
+
+.right img {
+    height: 36px;
+    width: 36px;
+    margin-right: 0.5rem;
+}
+
+.search-bar {
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+/* Secondary Bar Styles */
+.bar2 {
+    margin: 2rem 2rem 2rem 2rem;
+    display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    line-height: 0.1;
+    font-size: 85%;
+    justify-content: space-between;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bar2 {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem; 
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bar2 {
+        margin: 0.5rem; 
+        font-size: 95%; 
+    }
+}
+
+/* Button Styles */
+.my-button {
+    background-color: white;
+    border: 2px solid #006dae;
+    color: black;
+    padding: 13px 40px;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 1px;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.my-button:hover {
+    background-color: #006dae;
+    color: white;
+}
+
+.button-1 {
+    background-color: white;
+}
+
+/* Mid Styles */
+.mid2 {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
+    padding-left: 5.5rem    ;
+}
+
+.mid2 > li {
+    position: relative; 
+}
+
+.mid2 > li > a {
+    text-decoration: none;
+    color: #000; 
+    padding: 0.5rem 1rem;
+    display: block;
+    border-bottom: 6px solid transparent;
+    transition: border-bottom 0.3s ease; 
+}
+
+.right li:hover {
+    background-color: #088bc8 
+    
+}
+
+.left img:hover{
+    background-color: #088bc8
+}
+
+.mid li:hover{
+    background-color: #088bc8
+}
+
+
+.mid2 > li > a:hover {
+    border-bottom: 6px solid #006dae; 
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    list-style: none;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1); 
+    background-color: white;
+    z-index: 1000;
+}
+
+.dropdown li a {
+    font-weight: 150;
+    color: #000000; 
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    margin-right: 7rem;
+    font-size: large;
+    padding: 10px 15px;
+}
+
+.dropdown li a:hover {
+    text-decoration: underline;
+    color: #004a80; 
+}
+
+/* Show dropdown on hover */
+.mid2 > li:hover .dropdown {
+    display: block;
+}
+
+  
+/* Hero Section Styles */
+.hero {
+    height: 80vh;
+    position: relative;
+}
+
+.hero-image {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 90%;
+    filter: brightness(100%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 26%;
+    left: 2%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.my-button2 {
+    text-decoration: none;
+    margin-left: 0.3rem;
+    color: white;
+    font-size: 1.2rem;
+    transition: text-decoration 0.3s;
+}
+
+.my-button2:hover {
+    text-decoration: underline;
+    color: aliceblue;
+}
+
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 500px;
+    z-index: 3;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .search-bar {
+        width: 70%;
+    }
+
+    .my-button2 {
+        font-size: 1rem;
+    }
+
+    .bar1 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .left {
+        gap: 1rem;
+    }
+
+    .mid {
+        display: none;
+    }
+
+    .right {
+        margin: 0;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-bar input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .bar2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .mid2 {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .right img {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+
+/* Additional styles for the CARDS section */
+.container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.intro {
+    margin-bottom: 2rem;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    color: black;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
+    background-color: white;
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-image {
+    width: 4.7rem;
+    height: auto;
+    margin-left: 1rem;
+}
+
+.card:hover {
+    box-shadow: 
+        0 6px 8px rgba(51, 50, 50, 0.3), 
+        -2px 2px 2px rgba(39, 39, 39, 0.1),
+        2px 2px 2px rgba(39, 39, 39, 0.1); 
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: #006dae;
+    font-weight: bold;
+    font-size: 19.2px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card p {
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+/* Styles for the new Monash change section */
+.monash-change-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #ddd;
+    margin-top: 2rem;
+    max-width: 73rem;
+    margin: 0.8rem auto;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.text-content, .image-content {
+    max-width: 50%;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.text-content {
+    text-align: left;
+    margin-left: 1.4rem;
+}
+
+.text-content h2 {
+    font-size: 30.4px;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.text-content p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #006dae;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.image-content {
+    position: relative;
+}
+
+.image-content img {
+    width: 100%;
+    margin-left: 1.1rem;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.play-icon::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Responsive design for the Monash change section */
+@media (max-width: 1024px) {
+    .monash-change-section {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .text-content, .image-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .image-content img {
+        margin-left: 0;
+    }
+
+    .play-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .text-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .text-content p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .play-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Styles for the new Monash Lens section */
+.monash-lens-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #ddd;
+    margin-top: 2rem;
+    max-width: 73rem;
+    margin: 1.5rem auto;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.text-content, .image-content {
+    max-width: 50%;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.text-content-lens {
+    text-align: left;
+    margin-left: 1.4rem;
+}
+
+.text-content-lens h2 {
+    font-size: 30.4px;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    color: #006dae;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.text-content-lens p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+.image-content-lens {
+    position: relative;
+}
+
+.image-content-lens img {
+    width: 100%;
+}
+
+/* Responsive design for the Monash Lens section */
+@media (max-width: 1024px) {
+    .monash-lens-section {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .text-content, .image-content {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive image styles */
+.responsive-image {
+    width: 100%;
+}
+
+.owl-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #ddd;
+    margin-top: 2rem;
+    max-width: 73rem;
+    margin: 0.8rem auto;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+
+/* Image content styles */
+.image-content-owl {
+    flex: 1;
+}
+
+.image-content-owl img {
+    width: 100%;
+    height: auto;
+}
+
+/* Text content styles */
+.text-content-owl {
+    flex: 1;
+    padding: 1rem 0 0 2.5rem;
+    text-align: left;
+}
+
+.text-content-owl h2 {
+    font-size: 21px;
+    font-weight: bolder;
+    margin-bottom: 1.2rem;
+    color: #006dae;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.text-content-owl p {
+    margin-bottom: 10rem;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.latest-news-heading {
+    color: black;
+    text-align: center;
+    margin: 3rem 0; 
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30.4px;
+}
+
+/* Button-2 styles */
+.button-2 {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #006dae;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.button-2 a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #ddd;
+    padding: 60px 0;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Footer Social Section */
+.footer-social {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-social i {
+    color: #ddd;
+    margin: 0 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.footer-social i:hover {
+    color: #fff;
+}
+
+/* Footer Acknowledgment */
+.footer-acknowledgment {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.footer-acknowledgment a {
+    color: #0af;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 0.5px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Info */
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    font-size: 16px;
+    border-bottom: 0.5px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.footer-info div {
+    width: 22%;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: grid;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info div {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
